@@ -6,7 +6,7 @@ Lighthouse is a PHP package that allows you to serve a GraphQL endpoint from you
 reduces the boilerplate required to create a schema, it integrates well with any Laravel project, and it's highly 
 customizable giving you full control over your data.
 
-#Steps
+# Steps
 1. git clone git@github.com:subiniz/graphql-lighthouse.git
 2. setup .env
 3. composer install
