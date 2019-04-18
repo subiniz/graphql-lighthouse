@@ -35,6 +35,24 @@ type Query{
     user (id: Int! @eq): User @find
 }
 
+type Mutation {
+    createUser (
+        name: String!
+        email: String @rules(apply: ["required", "email", "unique:users,email"])
+        password: String! @bcrypt
+    ): User @create #@create((model: "App\\User")->incase the model name is different
+
+    updateUser(
+        id: ID!
+        name: String!
+        email: String
+    ): User @update(model: "App\\User")
+
+    deleteUser(
+        id: ID!
+    ): User @delete(model: "App\\User")
+}
+
 #import user.graphql
 
 
